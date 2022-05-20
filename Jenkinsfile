@@ -16,17 +16,8 @@ pipeline {
          }
        }
        stage ('Deployments') {
-         parallel{
-           stage ('Deploy to Staging'){
-             steps {
-               sh "cp **/target/*.war /home/ivan/programms/tomcat-staging/webapps"
-             }
-           }
-           stage ('Deploy to prod') {
-             steps {
-               sh "cp **/target/*.war /home/ivan/programms/tomcat-prod/webapps"
-             }     
-           }
+         steps {
+          echo "deploy" 
          }
        }
     }
