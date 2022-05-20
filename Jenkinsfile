@@ -18,6 +18,7 @@ pipeline {
        stage ('Deployments') {
          steps {
           echo "deploy" 
+          build job: 'deploy_to_staging'
          }
        }
     }
